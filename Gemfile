@@ -22,6 +22,11 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# jwt authentication
+gem 'knock', '~> 2.1', '>= 2.1.1'
+# Serializer json
+gem 'active_model_serializers'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
