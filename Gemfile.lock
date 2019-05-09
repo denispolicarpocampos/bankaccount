@@ -53,6 +53,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
+    cancancan (3.0.1)
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.1.5)
@@ -141,6 +142,7 @@ GEM
     rspec-expectations (3.8.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
+    rspec-json_expectations (2.2.0)
     rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
@@ -183,6 +185,7 @@ DEPENDENCIES
   active_model_serializers
   bootsnap (>= 1.1.0)
   byebug
+  cancancan
   database_cleaner
   factory_bot_rails (~> 4.0)
   ffaker
@@ -193,6 +196,7 @@ DEPENDENCIES
   rack-attack
   rails (~> 5.2.3)
   rails-controller-testing
+  rspec-json_expectations
   rspec-rails (~> 3.5)
   shoulda-matchers
   spring

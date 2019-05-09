@@ -14,8 +14,8 @@ module Requests
       JSON.parse(serializer.new(object).to_json)
     end
 
-    def each_serialized serializer, object
-      serialized = ActiveModelSerializers::SerializableResource.new(object, each_serializer: serializer).to_json
+    def each_serialized serializer, objects
+      serialized = ActiveModelSerializers::SerializableResource.new(objects, each_serializer: serializer).to_json
       JSON.parse(serialized)
     end
   end
