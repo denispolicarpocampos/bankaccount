@@ -25,6 +25,8 @@ services:
     volumes:
       - .:/tertecno
       - app-gems:/app-gems
+    stdin_open: true
+    tty: true
 
 volumes:
   redis:
