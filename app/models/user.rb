@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_one :account
 
   validates_length_of :password,
                       maximum: 72,

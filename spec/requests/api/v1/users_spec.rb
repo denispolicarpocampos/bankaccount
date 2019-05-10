@@ -10,7 +10,8 @@ RSpec.describe 'Api::V1::Users', type: :request do
 
     context 'Authenticated' do
       let(:user) { create(:user) }
-
+      let!(:account) { create(:account, user: user) }
+      
       before do
         get '/api/v1/users/current', headers: header_with_authentication(user)
       end
@@ -62,6 +63,7 @@ RSpec.describe 'Api::V1::Users', type: :request do
       context 'Resource owner' do
         context 'Valid params' do
           let(:user) { create(:user) }
+          let!(:account) { create(:account, user: user) }
           let(:user_params) { attributes_for(:user) }
 
           before do

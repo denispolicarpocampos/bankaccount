@@ -1,19 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'users/create'
-      get 'users/destroy'
-      get 'users/update'
-      get 'users/current'
-      get 'users/show'
-      get 'users/following'
-      get 'users/followers'
-    end
-  end
-  namespace :api do
-    namespace :v1 do
       post 'user_token', to: 'user_token#create'
-      resources :users, only: %i[create update]
+      resources :users, only: %i[create update] do
+        get 'current', on: :collection
+      end
     end
   end
 end
