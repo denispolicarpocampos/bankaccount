@@ -5,7 +5,7 @@ module Api
       has_one :account
 
       def account
-        AccountSerializer.new(object.account).attributes
+        AccountUserSerializer.new(object.account).attributes
       end
 
     end

@@ -1,7 +1,8 @@
 module Api
   module V1
     class AccountSerializer < ActiveModel::Serializer # >
-      attributes :number
+      attributes :amount
+
     end
   end
 end

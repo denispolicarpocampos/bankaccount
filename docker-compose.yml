@@ -28,6 +28,17 @@ services:
     stdin_open: true
     tty: true
 
+  jobs:
+    depends_on:
+      - "postgres"
+      - "redis"
+      - "app"
+    build: .
+    command: bash start_jobs.sh
+    volumes:
+      - .:/tertecno
+      - app-gems:/app-gems
+
 volumes:
   redis:
   postgres:
