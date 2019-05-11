@@ -1,24 +1,25 @@
-# README
+# Overview
+Clone o projeto do github e rode os seguintes comandos na linha de comando para rodar o projeto:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+É necessário ter docker e docker-compose instalados.
 
-Things you may want to cover:
+1. docker-compose build
+2. docker-compose run --rm app bundle install
+2. docker-compose run --rm app bundle exec rake db:create db:migrate db:seed
+3. docker-compose up
 
-* Ruby version
+Rodando db:seed dois usuários padrões serão criados:
 
-* System dependencies
+usuario1: teste1@teste.com.br
+senha: secret123
+conta bancária: 1000
+valor: R$ 50
 
-* Configuration
+usuario1: teste2@teste.com.br
+senha: secret123
+conta bancária: 1001
+valor: R$ 50
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Authentication
+Chame o endpoint /api/v1/user_token para adquirir o token jwt para autenticação.
