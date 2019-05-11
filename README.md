@@ -20,6 +20,8 @@ senha: secret123
 conta bancária: 1001
 valor: R$ 50
 
+LINK DA DOCUMENTAÇÃO DA API: https://www.getpostman.com/collections/125c86c1dfaa9facf153
+
 
 # Authentication
 Chame o endpoint /api/v1/user_token para adquirir o token jwt para autenticação.
